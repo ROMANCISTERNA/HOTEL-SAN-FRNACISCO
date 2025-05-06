@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel San Francisco Fiambalá - Donde el desierto, las termas y la cordillera se encuentran. Disfruta de las dunas de Tatón, las aguas termales y los paisajes andinos en un alojamiento con historia.">
+    <meta name="keywords" content="hotel, fiambalá, catamarca, alojamiento, turismo, termas, dunas, san francisco, andes, tatón, cordillera, montañas">
+    <title>Hotel San Francisco Fiambalá - Entre Dunas, Termas y Montañas | Experiencia Andina</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'azul': '#1e3a8a',
+                        'azul-claro': '#3b82f6',
+                        'dorado': '#d4a017',
+                        'arena': '#f5e8c9',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 6s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Hotel San Francisco Fiambalá",
+      "description": "Hotel histórico entre las dunas de Tatón, termas y montañas de Fiambalá, Catamarca",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Abaucán S/N",
+        "addressLocality": "Fiambalá",
+        "addressRegion": "Catamarca",
+        "postalCode": "5345",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-27.6870",
+        "longitude": "-67.6186"
+      },
+      "telephone": "+543834538524",
+      "priceRange": "$$",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4",
+        "bestRating": "5"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Piscina"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "WiFi gratuito"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Desayuno incluido"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Estacionamiento gratuito"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Excursiones a dunas y termas"
+        }
+      ],
+      "image": [
+        "https://tuhotel.com/img/hero-bg.jpg",
+        "https://tuhotel.com/img/dunas-taton.jpg",
+        "https://tuhotel.com/img/termas-fiambala.jpg"
+      ],
+      "url": "https://tuhotel.com"
+    }
+    </script>
+</head>
+<body class="font-montserrat bg-arena text-gray-800">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-gray-900 to-transparent py-4 hover:bg-gray-900">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center">
+                <img src="img/logo-hotel.png" alt="Logo Hotel San Francisco" class="h-10">
+                <span class="hidden lg:inline ml-3 text-white text-xl font-bold">Hotel San Francisco</span>
+            </a>
+            
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#inicio" class="text-white hover:text-dorado transition">Inicio</a>
+                <a href="#habitaciones" class="text-white hover:text-dorado transition">Habitaciones</a>
+                <a href="#servicios" class="text-white hover:text-dorado transition">Servicios</a>
+                <a href="#experiencias" class="text-white hover:text-dorado transition">Experiencias</a>
+                <a href="#galeria" class="text-white hover:text-dorado transition">Galería</a>
+                <a href="#historia" class="text-white hover:text-dorado transition">Historia</a>
+                <a href="#testimonios" class="text-white hover:text-dorado transition">Testimonios</a>
+                <a href="#ubicacion" class="text-white hover:text-dorado transition">Ubicación</a>
+                
+                <div class="flex space-x-4 ml-6">
+                    <a href="#contacto" class="bg-dorado hover:bg-yellow-600 text-white px-4 py-2 rounded-full font-bold transition transform hover:scale-105">
+                        <i class="fas fa-phone-alt mr-1"></i> Contacto
+                    </a>
+                    <a href="#reservar" class="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-4 py-2 rounded-full font-bold transition">
+                        <i class="fas fa-calendar-alt mr-1"></i> Reservar
+                    </a>
+                </div>
+            </div>
+            
+            <button class="lg:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('img/hero-bg.jpg')">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-6 z-10 text-center text-white">
+            <img src="img/logo-blanco.png" alt="Logo Hotel San Francisco" class="mx-auto mb-8 max-w-xs animate-float">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-playfair">Hotel San Francisco</h1>
+            <p class="text-2xl md:text-3xl mb-8">Donde el desierto, las termas y la cordillera se encuentran</p>
+            
+                    </div>
+        
+        <!-- Flecha indicadora scroll -->
+        <a href="#sobre-nosotros" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </a>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-azul mb-6 font-playfair">Un Refugio Andino en Fiambalá</h2>
+                    <p class="text-xl mb-8">En el corazón de la región más espectacular de Catamarca, donde las dunas doradas se funden con los picos nevados, el Hotel San Francisco te espera con su mezcla única de historia y confort.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-azul text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-mountain text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-dorado text-lg font-bold">Confort Contemporáneo en un Marco Colonial</h5>
+                                <p>Experimenta el equilibrio perfecto entre el confort actual y el encanto de épocas pasadas. Nuestras habitaciones ofrecen comodidades modernas y un diseño actual, integrándose armoniosamente en la atmósfera histórica y señorial de nuestro hotel colonial.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-azul text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-history text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-dorado text-lg font-bold">Patrimonio Cultural</h5>
+                                <p>Nuestra construcción de adobe conserva más de 100 años de historia fiambalense.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-azul text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-umbrella-beach text-xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-dorado text-lg font-bold">Termas Relajantes</h5>
+                                <p>A solo minutos de las famosas aguas termales de Fiambalá.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <img src="img/hotel-exterior.jpg" alt="Exterior del Hotel San Francisco" class="rounded-xl shadow-2xl">
+                    <div class="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-md flex items-center">
+                        <i class="fas fa-certificate text-dorado mr-2"></i>
+                        <span class="text-sm">Descubre un rincón auténtico de Catamarca, donde la tradición se fusiona con la hospitalidad para ofrecerte una experiencia inolvidable.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Paisajes -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Los Paisajes que nos Rodean</h2>
+                <p class="text-xl text-gray-600">Descubre la belleza única de Fiambalá</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105">
+                    <img src="img/dunas-taton.jpg" alt="Dunas de Tatón" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h5 class="text-dorado text-xl font-bold mb-2">Dunas de Tatón</h5>
+                        <p class="mb-4">El mar de dunas más impresionante de Argentina, a solo 40 minutos del hotel.</p>
+                        <a href="#" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-4 py-2 rounded-full transition">
+                            Ver excursiones
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105">
+                    <img src="img/termas-fiambala.jpg" alt="Termas de Fiambalá" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h5 class="text-dorado text-xl font-bold mb-2">Termas de Fiambalá</h5>
+                        <p class="mb-4">Aguas termales naturales con propiedades relajantes y terapéuticas.</p>
+                        <a href="#" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-4 py-2 rounded-full transition">
+                            Cómo llegar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-105">
+                    <img src="img/cordillera-andes.jpg" alt="Cordillera de los Andes" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h5 class="text-dorado text-xl font-bold mb-2">Cordillera de los Andes</h5>
+                        <p class="mb-4">Vistas panorámicas a los imponentes picos andinos desde nuestro hotel.</p>
+                        <a href="#" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-4 py-2 rounded-full transition">
+                            Ver actividades
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#ubicacion" class="inline-block bg-azul hover:bg-azul-claro text-white px-8 py-4 rounded-full font-bold shadow-lg transition transform hover:scale-105">
+                    <i class="fas fa-map-marked-alt mr-2"></i>Explorar todos los atractivos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habitaciones -->
+    <section id="habitaciones" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Nuestras Habitaciones</h2>
+                <p class="text-xl text-gray-600">Descanso con vistas a los paisajes más espectaculares</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Habitación Doble -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-[1.02]">
+                    <div class="relative">
+                        <img src="img\habitacion-doble standar.jpg" alt="Habitación Doble" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-azul text-white px-3 py-1 rounded-full text-sm font-bold">Más solicitada</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h5 class="text-xl font-bold">Habitación Doble Standar</h5>
+                            <div class="text-dorado">
+                               
+                                 </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-bed text-dorado mr-2 mt-1"></i>
+                                <span>2 camas Twin Size o 1 cama Queen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-expand text-dorado mr-2 mt-1"></i>
+                                <span>25 m² - Vista al jardín o montañas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-snowflake text-dorado mr-2 mt-1"></i>
+                                <span>Aire acondicionado frío/calor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-wifi text-dorado mr-2 mt-1"></i>
+                                <span>WiFi de alta velocidad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-tv text-dorado mr-2 mt-1"></i>
+                                <span>TV satelital 32"</span>
+                            </li>
+                            <i class="fas fa-wine-bottle"></i> <!-- Icono de botella -->
+                            <i class="fas fa-snowflake"></i>
+                            <span>Frigobar</span>
+                            </li>
+                        </ul>
+                        <a href="#contacto" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-3 rounded-full font-bold transition">
+                            <i class="fas fa-info-circle mr-2"></i>Consultar Disponibilidad
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Habitación Doble -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-[1.02]">
+                    <div class="relative">
+                        <img src="img/habitacion-doble.jpg" alt="Habitación Doble" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-azul text-white px-3 py-1 rounded-full text-sm font-bold">Más solicitada</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h5 class="text-xl font-bold">Habitación Doble Superior</h5>
+                            <div class="text-dorado">
+                               
+                                 </div>
+                        </div>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-bed text-dorado mr-2 mt-1"></i>
+                                <span>2 camas Twin Size o 1 cama Queen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-expand text-dorado mr-2 mt-1"></i>
+                                <span>25 m² - Vista al jardín o montañas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-snowflake text-dorado mr-2 mt-1"></i>
+                                <span>Aire acondicionado frío/calor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-wifi text-dorado mr-2 mt-1"></i>
+                                <span>WiFi de alta velocidad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-tv text-dorado mr-2 mt-1"></i>
+                                <span>TV satelital 32"</span>
+                            </li>
+                        </ul>
+                        <a href="#contacto" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-3 rounded-full font-bold transition">
+                            <i class="fas fa-info-circle mr-2"></i>Consultar Disponibilidad
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Habitación Triple -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-[1.02]">
+                    <div class="relative">
+                        <img src="img/habitacion-triple.jpg" alt="Habitación Triple" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-dorado text-gray-900 px-3 py-1 rounded-full text-sm font-bold">Familiar</span>
+                    </div>
+                    <div class="p-6">
+                        <h5 class="text-xl font-bold mb-4">Habitación Triple Superior</h5>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-bed text-dorado mr-2 mt-1"></i>
+                                <span>1 cama Queen + 1 individual</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-expand text-dorado mr-2 mt-1"></i>
+                                <span>30 m² - Vista panorámica a la cordillera</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bath text-dorado mr-2 mt-1"></i>
+                                <span>Baño privado con amenities</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-sun text-dorado mr-2 mt-1"></i>
+                                <span>Balcón privado con asientos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-tshirt text-dorado mr-2 mt-1"></i>
+                                <span>Servicio de lavandería</span>
+                            </li>
+                        </ul>
+                        <a href="#contacto" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-3 rounded-full font-bold transition">
+                            <i class="fas fa-info-circle mr-2"></i>Consultar Disponibilidad
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Suite Familiar -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transition transform hover:scale-[1.02]">
+                    <div class="relative">
+                        <img src="img/habitacion-quintuple.jpg" alt="Suite Familiar" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-azul text-white px-3 py-1 rounded-full text-sm font-bold">Exclusiva</span>
+                    </div>
+                    <div class="p-6">
+                        <h5 class="text-xl font-bold mb-4">Suite Familiar Superior</h5>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-bed text-dorado mr-2 mt-1"></i>
+                                <span>1 King Size + 3 individuales</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-expand text-dorado mr-2 mt-1"></i>
+                                <span>45 m² - Espacio amplio y luminoso</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-glass-whiskey text-dorado mr-2 mt-1"></i>
+                                <span>Frigobar incluido</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-couch text-dorado mr-2 mt-1"></i>
+                                <span>Sala de estar independiente</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-users text-dorado mr-2 mt-1"></i>
+                                <span>Capacidad para 5 personas</span>
+                            </li>
+                        </ul>
+                        <a href="#contacto" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-3 rounded-full font-bold transition">
+                            <i class="fas fa-info-circle mr-2"></i>Consultar Disponibilidad
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contacto" class="inline-block bg-dorado hover:bg-yellow-600 text-white px-8 py-4 rounded-full font-bold shadow-lg text-lg transition transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>Consultar Tarifas Personalizadas
+                </a>
+                <p class="text-sm text-gray-500 mt-3">Descuentos especiales para estadías prolongadas y grupos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-600">Todo lo que necesitas para una estadía perfecta</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-concierge-bell text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Recepción 24h</h5>
+                    <p class="text-sm text-gray-600">Asistencia personalizada permanente en español e inglés</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-swimming-pool text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Piscina Exterior</h5>
+                    <p class="text-sm text-gray-600">Climatizada con sistema salino y vista a la montaña</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Desayuno Buffet</h5>
+                    <p class="text-sm text-gray-600">Productos regionales y artesanales incluidos</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-wifi text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">WiFi Gratis</h5>
+                    <p class="text-sm text-gray-600">Conexión de alta velocidad en todas las áreas</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Seguridad</h5>
+                    <p class="text-sm text-gray-600">Sistema de cámaras CCTV y caja fuerte</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-parking text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Estacionamiento</h5>
+                    <p class="text-sm text-gray-600">Gratuito y vigilado para huéspedes</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-biking text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Excursiones</h5>
+                    <p class="text-sm text-gray-600">Organización de tours a dunas y termas</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition">
+                    <div class="bg-azul text-white p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-spa text-2xl"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">Termas Cercanas</h5>
+                    <p class="text-sm text-gray-600">Traslados a las termas de Fiambalá</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contacto" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-6 py-3 rounded-full font-bold transition">
+                    <i class="fas fa-question-circle mr-2"></i>Consultar sobre servicios adicionales
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencias -->
+    <section id="experiencias" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Experiencias Únicas</h2>
+                <p class="text-xl text-gray-600">Vive la magia de Fiambalá con nuestras actividades</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/experiencia-dunas.jpg" alt="Tour por las Dunas" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h5 class="font-bold text-lg">Tour por las Dunas de Tatón</h5>
+                                <span class="inline-block bg-dorado text-gray-900 px-2 py-1 rounded-full text-xs font-bold mt-1">Aventura</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-azul font-bold">CONSULTAR TARIFA</div>
+                                <small class="text-gray-500"></small>
+                            </div>
+                        </div>
+                        <p class="mb-4">Recorrido guiado por el impresionante mar de dunas más alto de Argentina.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-dorado mr-2 mt-1"></i>
+                                <span>Duración: 6 horas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-dorado mr-2 mt-1"></i>
+                                <span>Salidas: Martes, Jueves, Sábados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-users text-dorado mr-2 mt-1"></i>
+                                <span>Grupos reducidos</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-2 rounded-full font-bold transition">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/experiencia-termas.jpg" alt="Relajación en Termas" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h5 class="font-bold text-lg">Día Completo en Termas</h5>
+                                <span class="inline-block bg-dorado text-gray-900 px-2 py-1 rounded-full text-xs font-bold mt-1">Relax</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-azul font-bold">CONSULTAR TARIFA</div>
+                                <small class="text-gray-500"></small>
+                            </div>
+                        </div>
+                        <p class="mb-4">Disfruta de las aguas termales naturales con propiedades terapéuticas.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-dorado mr-2 mt-1"></i>
+                                <span>Duración: 8 horas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-dorado mr-2 mt-1"></i>
+                                <span>Salidas: Miércoles y Domingos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-dorado mr-2 mt-1"></i>
+                                <span>Almuerzo incluido</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-2 rounded-full font-bold transition">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="img/experiencia-cabalgata.jpg" alt="Cabalgata Andina" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h5 class="font-bold text-lg">Cabalgata al Atardecer</h5>
+                                <span class="inline-block bg-dorado text-gray-900 px-2 py-1 rounded-full text-xs font-bold mt-1">Tradición</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-azul font-bold">CONSULTAR TARIFA</div>
+                                <small class="text-gray-500"></small>
+                            </div>
+                        </div>
+                        <p class="mb-4">Recorrido a caballo por senderos andinos con vistas espectaculares.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-clock text-dorado mr-2 mt-1"></i>
+                                <span>Duración: 3 horas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-dorado mr-2 mt-1"></i>
+                                <span>Salidas: Diarias</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-wine-glass-alt text-dorado mr-2 mt-1"></i>
+                                <span>Degustación incluida</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block w-full bg-azul hover:bg-azul-claro text-white text-center py-2 rounded-full font-bold transition">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contacto" class="inline-block bg-dorado hover:bg-yellow-600 text-white px-8 py-4 rounded-full font-bold shadow-lg text-lg transition transform hover:scale-105">
+                    <i class="fas fa-calendar-check mr-2"></i>Reservar Experiencia
+                </a>
+                <p class="text-sm text-gray-500 mt-3">Consultar por paquetes personalizados y descuentos para grupos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Galería</h2>
+                <p class="text-xl text-gray-600">Descubre nuestro espacio y los alrededores</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="img/galeria-1.jpg" class="gallery-item group relative block overflow-hidden rounded-xl">
+                    <img src="img/galeria-1.jpg" alt="Recepción del hotel" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition">
+                        <h5 class="text-white text-xl font-bold">Recepción Principal</h5>
+                        <p class="text-white">Ambiente cálido y acogedor</p>
+                    </div>
+                </a>
+                
+                <a href="img/galeria-2.jpg" class="gallery-item group relative block overflow-hidden rounded-xl">
+                    <img src="img/galeria-2.jpg" alt="Piscina del hotel" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition">
+                        <h5 class="text-white text-xl font-bold">Área de Piscina</h5>
+                        <p class="text-white">Con vista a las montañas</p>
+                    </div>
+                </a>
+                
+                <a href="img/galeria-3.jpg" class="gallery-item group relative block overflow-hidden rounded-xl">
+                    <img src="img/galeria-3.jpg" alt="Restaurante del hotel" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition">
+                        <h5 class="text-white text-xl font-bold">Restaurante</h5>
+                        <p class="text-white">Cocina regional y fusión</p>
+                    </div>
+                </a>
+                
+                <a href="img/galeria-4.jpg" class="gallery-item group relative block overflow-hidden rounded-xl">
+                    <img src="img/galeria-4.jpg" alt="Jardines del hotel" class="w-full h-64 sm:h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition">
+                        <h5 class="text-white text-xl font-bold">Jardines</h5>
+                        <p class="text-white">Espacios verdes para relajarse</p>
+                    </div>
+                </a>
+                
+                <a href="img/galeria-5.jpg" class="gallery-item group relative block overflow-hidden rounded-xl">
+                    <img src="img/galeria-5.jpg" alt="Sala común" class="w-full h-64 sm:h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition">
+                        <h5 class="text-white text-xl font-bold">Sala de Estar</h5>
+                        <p class="text-white">Ambiente rústico y confortable</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-6 py-3 rounded-full font-bold transition">
+                    <i class="fas fa-images mr-2"></i>Ver galería completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Histórica -->
+    <section id="historia" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 relative">
+                    <img src="img/casa-antigua.jpg" alt="Casa histórica de adobe" class="rounded-xl shadow-2xl w-full">
+                    <div class="absolute -bottom-4 -left-4 bg-white p-3 rounded-lg shadow-md">
+                        <small class="text-gray-600">Estructura original conservada desde 1920</small>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-azul mb-6 font-playfair">Nuestra Historia Viva</h2>
+                    <p class="text-xl mb-6">Combinamos arquitectura moderna con una auténtica casa de adobe de más de 100 años</p>
+                    
+                    <p class="mb-6">El Hotel San Francisco tiene sus raíces en la antigua casona de la familia Albarracín, construida en 1923 con técnicas tradicionales de adobe. En 1998 fue declarada Patrimonio Cultural de Fiambalá por su valor histórico y arquitectónico.</p>
+                    
+                    <div class="bg-gray-100 p-6 rounded-xl mb-6">
+                        <h5 class="text-dorado text-lg font-bold mb-4">Características únicas:</h5>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-archway text-dorado mr-2 mt-1"></i>
+                                <span>Muros originales de adobe de 60 cm de espesor</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-photo-video text-dorado mr-2 mt-1"></i>
+                                <span>Galería histórica con fotos de época</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-landmark text-dorado mr-2 mt-1"></i>
+                                <span>Declarado patrimonio cultural local en 1998</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-book text-dorado mr-2 mt-1"></i>
+                                <span>Biblioteca con documentos históricos de la región</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-6 py-3 rounded-full font-bold transition">
+                            <i class="fas fa-book-open mr-2"></i>Conoce más de nuestra historia
+                        </a>
+                        <a href="#" class="inline-block border border-gray-400 text-gray-700 hover:bg-gray-200 px-6 py-3 rounded-full font-bold transition">
+                            <i class="fas fa-images mr-2"></i>Ver archivo fotográfico
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Testimonios</h2>
+                <p class="text-xl text-gray-600">Lo que dicen nuestros huéspedes</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-dorado mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic">"Increíble experiencia. El hotel combina perfectamente la historia con comodidades modernas. La atención del personal fue excepcional y las vistas a las montañas son impresionantes. Las excursiones a las dunas fueron el punto destacado de nuestro viaje."</p>
+                    <div class="flex items-center">
+                        <img src="img/testimonio-1.jpg" alt="Cliente satisfecho" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h6 class="font-bold">María González</h6>
+                            <small class="text-gray-500">Buenos Aires</small>
+                            <div class="text-xs text-gray-400 mt-1">Estadía en Enero 2023</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-dorado mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic">"Nos encantó la Suite Familiar. Espaciosa, limpia y con un diseño que respeta la arquitectura local. Los niños disfrutaron mucho de la piscina y los jardines. La excursión a las termas fue relajante y el personal del hotel nos dio excelentes recomendaciones."</p>
+                    <div class="flex items-center">
+                        <img src="img/testimonio-2.jpg" alt="Cliente satisfecho" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h6 class="font-bold">Carlos y Familia</h6>
+                            <small class="text-gray-500">Córdoba</small>
+                            <div class="text-xs text-gray-400 mt-1">Estadía en Diciembre 2022</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-dorado mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="mb-6 italic">"Perfecto para quienes buscan tranquilidad. El desayuno con productos regionales fue un plus. La ubicación es ideal para explorar las dunas y la cordillera. Volveremos sin duda en nuestro próximo viaje a Catamarca. Recomiendo especialmente la cabalgata al atardecer."</p>
+                    <div class="flex items-center">
+                        <img src="img/testimonio-3.jpg" alt="Cliente satisfecho" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h6 class="font-bold">Laura Martínez</h6>
+                            <small class="text-gray-500">Mendoza</small>
+                            <div class="text-xs text-gray-400 mt-1">Estadía en Marzo 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-6 py-3 rounded-full font-bold transition">
+                    <i class="fab fa-tripadvisor mr-2"></i>Ver más opiniones en TripAdvisor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-azul mb-4 font-playfair">Ubicación Privilegiada</h2>
+                <p class="text-xl text-gray-600">En el corazón de Fiambalá, cerca de todo</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2 bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-azul mb-6">Hotel San Francisco</h3>
+                    
+                    <div class="mb-6">
+                        <h5 class="text-dorado text-lg font-bold mb-3 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>Dirección Exacta
+                        </h5>
+                        <p class="mb-2">
+                            Calle Abaucán S/N<br>
+                            Fiambalá, Catamarca
+                        </p>
+                        <small class="text-gray-500">A 200 metros de la Plaza Principal</small>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h5 class="text-dorado text-lg font-bold mb-3 flex items-center">
+                            <i class="fas fa-road mr-2"></i>Cómo llegar
+                        </h5>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-bus text-dorado mr-2 mt-1"></i>
+                                <span>Desde Terminal de Ómnibus: 15 min caminando</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-pin text-dorado mr-2 mt-1"></i>
+                                <span>Coordenadas GPS: 27.6870° S, 67.6186° O</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-car text-dorado mr-2 mt-1"></i>
+                                <span>Distancia a Paso San Francisco: 150 km</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h5 class="text-dorado text-lg font-bold mb-3 flex items-center">
+                            <i class="fas fa-clock mr-2"></i>Horarios
+                        </h5>
+                        <ul>
+                            <li class="mb-1"><strong>Check-in:</strong> 14:00 hs</li>
+                            <li><strong>Check-out:</strong> 10:00 hs</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h5 class="text-dorado text-lg font-bold mb-3 flex items-center">
+                            <i class="fas fa-map-marked-alt mr-2"></i>Atractivos cercanos
+                        </h5>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-umbrella-beach text-dorado mr-2"></i>
+                                <small>Termas: 5 km</small>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-mountain text-dorado mr-2"></i>
+                                <small>Dunas: 40 km</small>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-store text-dorado mr-2"></i>
+                                <small>Centro: 200 m</small>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-utensils text-dorado mr-2"></i>
+                                <small>Restaurantes: 300 m</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="h-full rounded-xl overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.357845680225!2d-67.61864968496817!3d-27.68702518301989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e316e1189f61b%3A0xbd786fd8edba6fd9!2sSan%20Francisco%20Hotel!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen 
+                                loading="lazy"
+                                class="min-h-[400px]">
+                        </iframe>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 mt-4 justify-center">
+                        <a href="https://maps.app.goo.gl/vZo9i1U8kbqLMPvX8" 
+                           class="inline-block border border-azul text-azul hover:bg-azul hover:text-white px-6 py-3 rounded-full font-bold transition text-center"
+                           target="_blank">
+                            <i class="fas fa-map-marked-alt mr-2"></i>Ver en Google Maps
+                        </a>
+                        <a href="#" class="inline-block border border-gray-400 text-gray-700 hover:bg-gray-200 px-6 py-3 rounded-full font-bold transition text-center">
+                            <i class="fas fa-download mr-2"></i>Descargar cómo llegar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-azul text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 font-playfair">Contacto</h2>
+                <p class="text-xl">Estamos para ayudarte</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-2/5 bg-azul-claro bg-opacity-20 p-8 rounded-xl backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                    
+                    <div class="flex mb-6">
+                        <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                        <div>
+                            <h5 class="text-dorado text-lg font-bold mb-2">Teléfono</h5>
+                            <p class="mb-1">+54 383 4538524</p>
+                            <small class="text-gray-300">Línea directa 24/7</small>
+                        </div>
+                    </div>
+                    
+                    <div class="flex mb-6">
+                        <i class="fas fa-envelope mt-1 mr-4"></i>
+                        <div>
+                            <h5 class="text-dorado text-lg font-bold mb-2">Email</h5>
+                            <p class="mb-1">info@hotelsanfranciscofiambala.com</p>
+                            <small class="text-gray-300">Respondemos en menos de 24hs</small>
+                        </div>
+                    </div>
+                    
+                    <div class="flex mb-6">
+                        <i class="fas fa-clock mt-1 mr-4"></i>
+                        <div>
+                            <h5 class="text-dorado text-lg font-bold mb-2">Horario de Atención</h5>
+                            <p>Lunes a Domingo: 8:00 - 22:00 hs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <i class="fas fa-share-alt mt-1 mr-4"></i>
+                        <div>
+                            <h5 class="text-dorado text-lg font-bold mb-2">Redes Sociales</h5>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=100090522992311" target="_blank" class="text-white hover:text-dorado transition">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-white hover:text-dorado transition">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="https://wa.me/543834538524" target="_blank" class="text-white hover:text-dorado transition">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-white hover:text-dorado transition">
+                                    <i class="fab fa-tripadvisor text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-3/5 bg-white p-8 rounded-xl text-gray-800">
+                    <h3 class="text-2xl font-bold text-azul mb-6">Envianos tu consulta</h3>
+                    <form id="formContacto" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="nombre" class="block mb-1 font-medium">Nombre completo <span class="text-red-500">*</span></label>
+                                <input type="text" id="nombre" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1 font-medium">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="telefono" class="block mb-1 font-medium">Teléfono</label>
+                                <input type="tel" id="telefono" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado">
+                            </div>
+                            <div>
+                                <label for="pais" class="block mb-1 font-medium">País/Provincia</label>
+                                <input type="text" id="pais" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="asunto" class="block mb-1 font-medium">Asunto <span class="text-red-500">*</span></label>
+                            <select id="asunto" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado" required>
+                                <option value="" selected disabled>Seleccione un tema</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="reserva">Reserva de habitación</option>
+                                <option value="excursion">Excursiones y actividades</option>
+                                <option value="grupos">Grupos o eventos</option>
+                                <option value="paquetes">Paquetes turísticos</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="fecha" class="block mb-1 font-medium">Fecha estimada de visita (opcional)</label>
+                            <input type="date" id="fecha" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado">
+                        </div>
+                        
+                        <div>
+                            <label for="mensaje" class="block mb-1 font-medium">Mensaje <span class="text-red-500">*</span></label>
+                            <textarea id="mensaje" rows="4" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-dorado focus:border-dorado" required></textarea>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <input type="checkbox" id="newsletter" class="mr-2 h-4 w-4 text-dorado focus:ring-dorado border-gray-300 rounded">
+                            <label for="newsletter" class="text-sm">
+                                Deseo recibir información sobre promociones y novedades
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-dorado hover:bg-yellow-600 text-white py-3 px-6 rounded-full font-bold transition transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservar -->
+    <section id="reservar" class="py-12 bg-dorado text-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="md:w-2/3 mb-6 md:mb-0">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-3">¿Listo para vivir la experiencia San Francisco?</h3>
+                    <p class="text-lg">Reserva ahora y recibe asesoramiento personalizado para tu aventura en Fiambalá.</p>
+                </div>
+                <div class="md:w-1/3 text-center md:text-right">
+                    <a href="#contacto" class="inline-block bg-azul hover:bg-azul-claro text-white px-8 py-4 rounded-full font-bold shadow-lg text-lg transition transform hover:scale-105">
+                        <i class="fas fa-calendar-alt mr-2"></i>Reservar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="img/logo-blanco.png" alt="Logo Hotel" class="h-12 mb-4">
+                    <p class="text-gray-400 text-sm mb-4">Donde las dunas, las termas y la cordillera se abrazan. Un refugio único en el corazón de Fiambalá.</p>
+                    
+                    <div class="mt-6">
+                        <h5 class="text-dorado text-lg font-bold mb-3">Descubre Fiambalá</h5>
+                        <p class="text-gray-400 text-sm mb-3">Suscríbete para recibir información sobre paisajes, termas y experiencias únicas.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Tu email" class="px-3 py-2 text-sm rounded-l-lg focus:outline-none focus:ring-1 focus:ring-dorado text-gray-800 w-full">
+                            <button type="submit" class="bg-dorado hover:bg-yellow-600 px-3 py-2 rounded-r-lg text-white">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Hotel</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-dorado transition">Inicio</a></li>
+                        <li><a href="#habitaciones" class="text-gray-400 hover:text-dorado transition">Habitaciones</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-dorado transition">Servicios</a></li>
+                        <li><a href="#experiencias" class="text-gray-400 hover:text-dorado transition">Experiencias</a></li>
+                        <li><a href="#galeria" class="text-gray-400 hover:text-dorado transition">Galería</a></li>
+                        <li><a href="#historia" class="text-gray-400 hover:text-dorado transition">Historia</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Servicios</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-dorado transition">Desayuno Buffet</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-dorado transition">Piscina Climatizada</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-dorado transition">Excursiones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-dorado transition">Traslados</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-dorado transition">Eventos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-dorado transition">Spa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Contacto</h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-dorado mr-2 mt-1"></i>
+                            <span>+54 383 4538524</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-dorado mr-2 mt-1"></i>
+                            <span>info@hotelsf.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-dorado mr-2 mt-1"></i>
+                            <span>Calle Abaucán S/N</span>
+                        </li>
+                        <li class="mt-4">
+                            <h6 class="text-lg font-semibold mb-2">Síguenos</h6>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/profile.php?id=100090522992311" target="_blank" class="text-gray-400 hover:text-dorado transition">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-gray-400 hover:text-dorado transition">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="https://wa.me/543834538524" target="_blank" class="text-gray-400 hover:text-dorado transition">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-gray-400 hover:text-dorado transition">
+                                    <i class="fab fa-tripadvisor text-xl"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Hotel San Francisco Fiambalá. Todos los derechos reservados.</p>
+                <p class="text-gray-400 text-sm">Entre dunas y montañas - Catamarca, Argentina</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/543834538524" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50 transition transform hover:scale-110" target="_blank" title="Contactanos por WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-gradient-to-b');
+                navbar.classList.add('bg-gray-900');
+            } else {
+                navbar.classList.add('bg-gradient-to-b');
+                navbar.classList.remove('bg-gray-900');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission
+        document.getElementById('formContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+        
+        // Mobile menu toggle (simplified for Tailwind)
+        document.querySelector('nav button').addEventListener('click', function() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Componentes personalizados */
+@layer components {
+  /* Botones */
+  .btn-primary {
+    @apply bg-dorado hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-bold shadow-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-dorado focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-full font-bold transition-all duration-300;
+  }
+  
+  .btn-outline-azul {
+    @apply border border-azul text-azul hover:bg-azul hover:text-white px-4 py-2 rounded-full font-medium transition-colors duration-300;
+  }
+
+  /* Tarjetas */
+  .card-habitacion {
+    @apply bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .card-experiencia {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .card-paisaje {
+    @apply bg-white rounded-xl overflow-hidden shadow-md transition-transform duration-300 hover:scale-[1.02];
+  }
+
+  /* Galería */
+  .gallery-item {
+    @apply relative block overflow-hidden rounded-lg group;
+  }
+  
+  .gallery-img {
+    @apply w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110;
+  }
+  
+  .gallery-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+
+  /* Elementos de formulario */
+  .form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dorado focus:border-transparent;
+  }
+  
+  .form-select {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dorado focus:border-transparent;
+  }
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-md {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(6px);
+  }
+  
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Estilos base personalizados */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-montserrat text-gray-800 bg-arena;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-playfair;
+  }
+  
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .mobile-menu {
+    @apply fixed inset-0 bg-gray-900 bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-6 p-6 transform translate-x-full transition-transform duration-300;
+  }
+  
+  .mobile-menu.active {
+    @apply translate-x-0;
+  }
+  
+  .hero-content h1 {
+    @apply text-4xl;
+  }
+  
+  .hero-content p {
+    @apply text-xl;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-backdrop-blur {
+    backdrop-filter: blur(6px);
+  }
+}
